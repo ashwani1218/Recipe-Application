@@ -1,5 +1,6 @@
 package com.ashwani.RecipeApplication.Model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -23,16 +24,17 @@ public class Recipe {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
-	private String descriptio9n;
+	private String description;
 	private Integer prepTime;
 	private Integer cookTime;
 	private Integer servings;
 	private String source;
 	private String url;
+	@Lob
 	private String directions;
 	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy = "recipe")
-	private Set<Ingredient> ingredient;
+	private Set<Ingredient> ingredient=new HashSet<Ingredient>();
 	
 	@Lob
 	private Byte[] image;
@@ -47,7 +49,7 @@ public class Recipe {
 	@JoinTable(name="recipe_category",
 			joinColumns=@JoinColumn(name="recipe_id"),
 				inverseJoinColumns=@JoinColumn(name="category_id"))
-	private Set<Category> category;
+	private Set<Category> category= new HashSet<Category>();
 	
 	public Long getId() {
 		return id;
@@ -55,11 +57,11 @@ public class Recipe {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getDescriptio9n() {
-		return descriptio9n;
+	public String getDescription() {
+		return description;
 	}
-	public void setDescriptio9n(String descriptio9n) {
-		this.descriptio9n = descriptio9n;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	public Integer getPrepTime() {
 		return prepTime;
