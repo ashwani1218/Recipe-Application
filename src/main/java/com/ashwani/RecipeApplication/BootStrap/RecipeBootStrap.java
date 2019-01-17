@@ -19,6 +19,10 @@ import com.ashwani.RecipeApplication.Repository.CategoryRepository;
 import com.ashwani.RecipeApplication.Repository.RecipeRepository;
 import com.ashwani.RecipeApplication.Repository.UnitOfMeasureRepository;
 
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Component
 public class RecipeBootStrap implements ApplicationListener<ContextRefreshedEvent>{
 	
