@@ -8,6 +8,7 @@ import java.util.Optional;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.ashwani.RecipeApplication.Model.Category;
 import com.ashwani.RecipeApplication.Model.Difficulty;
@@ -41,6 +42,7 @@ public class RecipeBootStrap implements ApplicationListener<ContextRefreshedEven
 	
 	
 	@Override
+	@Transactional
 	public void onApplicationEvent(ContextRefreshedEvent event) {
 		recipeRepository.saveAll(getRecipe());
 		
