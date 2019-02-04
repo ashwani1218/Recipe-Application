@@ -6,6 +6,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 import org.junit.Before;
@@ -22,7 +23,7 @@ public class RecipeServiceImplTest {
 	@Mock
 	RecipeRepository recipeRepository;
 	
-	
+	private Long id=1L;
 	@Before
 	public void setUp() {
 		MockitoAnnotations.initMocks(this);
@@ -44,5 +45,6 @@ public class RecipeServiceImplTest {
 		assertEquals(recipe.size(), 1);
 		verify(recipeRepository, times(1)).findAll();
 	}
+
 
 }

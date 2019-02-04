@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <link   rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" 
+			integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"
+			th:href="@{/webjars/bootstrap/4.2.1/css/bootstrap.min.css}">
+	
+	<script src="/webjars/jquery/1.11.1/jquery.min.js"></script>
+	
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" 
+			integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"
+			th:src="@{/webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</head>
+<body>
+    <div class="container-fluid" style="...">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel-group">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h1 class="panel-title" th:text="${recipe.description}">Recipe description here!</h1>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Categories:</h5>
+                                </div>
+                                <div class="col-md-9">
+                                    <ul >
+                                        <li>cat one</li>
+                                        <li>cat two</li>
+                                        <li>cat three</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Prep Time:</h5>
+                                </div>
+                                <div class="col-md-3">
+                                    <p>30 mins</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <h5>Difficulty:</h5>
+                                </div>
+                                <div class="col-md-3">
+                                    <p>Easy</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>CookTime:</h5>
+                                </div>
+                                <div class="col-md-3">
+                                    <p>30 mins</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <h5>Servings:</h5>
+                                </div>
+                                <div class="col-md-3">
+                                    <p>5</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Source:</h5>
+                                </div>
+                                <div class="col-md-3">
+                                    <p>Some Source</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <h5>URL:</h5>
+                                </div>
+                                <div class="col-md-3">
+                                    <p>http://www.example.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h1 class="panel-title">Ingredients</h1>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <ul>
+                                            <li>1 cup of milk</li>
+                                            <li>1 teaspoon of chocolate</li>
+                                            <li>1 teaspoon of sugar</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h1 class="panel-title">Directions</h1>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p> Directions of cooking</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="panel panel-primary">
+                             <div class="panel-heading">
+                                <h1 class="panel-title">Notes</h1>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p> Directions of cooking</p>
+                                    </div>                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+</body>
+</html>

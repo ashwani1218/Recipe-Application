@@ -7,5 +7,5 @@ import com.ashwani.RecipeApplication.Model.Recipe;
 public interface RecipeService {
 
 	Set<Recipe> getRecipe();
-	
+	Recipe findById(Long id);
 }
